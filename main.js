@@ -1,0 +1,1 @@
+const component = require("./myModule/component");
