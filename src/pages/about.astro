@@ -1,12 +1,68 @@
-<body>
-    <a href="/">Home</a>
-<a href="/about/">About</a>
+---
+const pageTitle = "Ici j'appelle une constante title dans le body";
+// Ecrire des expression javascript dans Astro
 
-    <h1>My Astro Site</h1>
+const identity = {
+  firstName: "Eudes",
+  lastName: "Mylhand",
+  country: "Congo",
+  occupation: "Technical Writer",
+  hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+
+---
+
+
+  <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Test-Astro-about</title>
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a href="/tutoriel/">Home</a>
+    <a href="/tutoriel/about/">About</a>
+    <a href="/tutoriel/blog/">Blog</a>
+
+    <h1>About Me Eudes Mylhand</h1>
+    <h1>{pageTitle}</h1>
+
+    <h2>My Astro Site</h2>
     <h1>About Me</h1>
     <h2>... and my new Astro site!</h2>
   
     <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
   
     <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
+    
+    <!-- Applle des variable Js Dans le haut de la page -->
+    <p>Here are a few facts about me:</p>
+        <ul>
+        <li>My name is {identity.firstName} {identity.lastName}.</li>
+        <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+        {identity.hobbies.length >= 2 &&
+            <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+        }
+        </ul>
+        <p>My skills are:</p>
+        <ul>
+        {skills.map((skill) => <li>{skill}</li>)}
+        </ul>
+
+        <!-- Affichier ou Non du contenu lier au JS -->
+            {happy && <p>I am happy to be learning Astro!</p>}
+
+            {finished && <p>I finished this tutorial!</p>}
+            
+            {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+
+
   </body>
+</html>

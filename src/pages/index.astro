@@ -1,5 +1,5 @@
 ---
-
+const titlepage ="Acceuil"
 ---
 
 <html lang="en">
@@ -8,17 +8,24 @@
 		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{titlepage}</title>
 	</head>
 	<body>
 
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+		<a href="/tutoriel/">Home</a>
+		<a href="/tutoriel/about/">About</a>
+		<a href="/tutoriel/blog/">Blog</a>
 
-		<h1>Astro_test</h1>
+		<h1>Astro_test {titlepage} </h1>
 		<div>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus aliquam est velit? Rem id qui, ex expedita autem eligendi repellat. Obcaecati saepe veniam laboriosam velit nulla, dicta rem dignissimos!</p>
+
+			<h2>Ajouter une ancre dans Astro</h2>
+			<ul>
+				<li><a href="/tutoriel/posts/post-1/">Post 1</a></li>
+				<li><a href="/tutoriel/posts/post-2/">Post 2</a></li>
+				<li><a href="/tutoriel/posts/post-3/">Post 3</a></li>
+			  </ul>
 		</div>
 	</body>
 </html>

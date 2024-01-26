@@ -1,9 +1,22 @@
-<body>
-    <a href="/">Home</a>
+
+---
+const pageTitle="Blog"
+---
+  <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro</title>
+    <title>{pageTitle}</title>
+  </head>
+ 
+  <body>
+    <a href="/tutoriel/">Home</a>
     <a href="/tutoriel/about/">About</a>
     <a href="/tutoriel/blog/">Blog</a>
   
-    <h1>My Astro Site</h1>
+    <h1>My Astro {pageTitle}</h1>
     <h1>My Astro Learning Blog</h1>
     <p>This is where I will post about my journey learning Astro.</p>
   </body>
+</html>
